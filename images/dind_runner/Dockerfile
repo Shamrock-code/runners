@@ -1,7 +1,5 @@
 FROM docker:stable-dind
 
-
-RUN cd /home/docker && mkdir actions-runner && cd actions-runner
 WORKDIR /home/docker/actions-runner
 
 RUN curl -o actions-runner-linux-x64.tar.gz -L https://github.com/actions/runner/releases/download/v2.305.0/actions-runner-linux-x64-2.305.0.tar.gz
