@@ -19,7 +19,6 @@ ORGANIZATION=Shamrock-code
 echo " ------------ Config ------------"
 echo "ORGANIZATION = ${ORGANIZATION}"
 echo "RUNNER_NAME = ${RUNNER_NAME}"
-echo "ImageName = ${ImageName}"
 echo " ------------ ------ ------------"
 
 echo "-> getting github runner token"
@@ -46,7 +45,7 @@ ORGANIZATION=$ORGANIZATION
 REG_TOKEN=$REG_TOKEN
 RUNNER_NAME=$RUNNER_NAME
 
-./config.sh --unattended --url https://github.com/$ORGANIZATION --token ${REG_TOKEN} --name ${RUNNER_NAME} --labels dind,ubuntu
+./config.sh --unattended --url https://github.com/$ORGANIZATION --token ${REG_TOKEN} --name ${RUNNER_NAME} --labels docker-runner
 
 cleanup() {
     echo "Removing runner..."

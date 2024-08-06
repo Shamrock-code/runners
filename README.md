@@ -1,7 +1,9 @@
 From docker guide for debian
 
+```
 sudo groupadd docker
 sudo usermod -aG docker $USER
+```
 
 ```bash
 sudo apt-get update
