@@ -48,7 +48,7 @@ GH_REPOSITORY=$GH_REPOSITORY
 REG_TOKEN=$REG_TOKEN
 RUNNER_NAME=$RUNNER_NAME
 
-./config.sh --unattended --ephemeral --url https://github.com/${GH_OWNER}/${GH_REPOSITORY} --token ${REG_TOKEN} --name ${RUNNER_NAME} --labels docker-runner
+./config.sh --unattended --url https://github.com/${GH_OWNER}/${GH_REPOSITORY} --token ${REG_TOKEN} --name ${RUNNER_NAME} --labels docker-runner
 
 trap 'cleanup; exit 130' INT
 trap 'cleanup; exit 143' TERM
