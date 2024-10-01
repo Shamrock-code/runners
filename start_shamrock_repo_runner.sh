@@ -5,7 +5,7 @@ rm -rf $DIRRUNNER
 mkdir -p $DIRRUNNER
 
 cd $DIRRUNNER
-curl -o actions-runner-linux-x64.tar.gz -L https://github.com/actions/runner/releases/download/v2.315.0/actions-runner-linux-x64-2.315.0.tar.gz
+curl -o actions-runner-linux-x64.tar.gz -L https://github.com/actions/runner/releases/download/v2.319.1/actions-runner-linux-x64-2.319.1.tar.gz
 tar xzf ./actions-runner-linux-x64.tar.gz
 
 sudo ./bin/installdependencies.sh
@@ -49,6 +49,11 @@ REG_TOKEN=$REG_TOKEN
 RUNNER_NAME=$RUNNER_NAME
 
 ./config.sh --unattended --url https://github.com/${GH_OWNER}/${GH_REPOSITORY} --token ${REG_TOKEN} --name ${RUNNER_NAME} --labels docker-runner
+
+cleanup() {
+    echo "Removing runner..."
+    ./config.sh remove --token ${REG_TOKEN}
+}
 
 trap 'cleanup; exit 130' INT
 trap 'cleanup; exit 143' TERM
