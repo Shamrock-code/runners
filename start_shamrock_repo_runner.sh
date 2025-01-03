@@ -5,7 +5,7 @@ rm -rf $DIRRUNNER
 mkdir -p $DIRRUNNER
 
 cd $DIRRUNNER
-curl -o actions-runner-linux-x64.tar.gz -L https://github.com/actions/runner/releases/download/v2.319.1/actions-runner-linux-x64-2.319.1.tar.gz
+curl -o actions-runner-linux-x64.tar.gz -L https://github.com/actions/runner/releases/download/v2.321.0/actions-runner-linux-x64-2.321.0.tar.gz
 tar xzf ./actions-runner-linux-x64.tar.gz
 
 sudo ./bin/installdependencies.sh
