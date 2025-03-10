@@ -29,7 +29,7 @@ echo " ----------------------------------------"
 
 echo " ----------- Starting runner ------------"
 docker run --privileged -ti \
-  -e GH_GIT_URL=${ORGANIZATION} \
+  -e GH_GIT_URL=$ORGANIZATION \
   -e REG_TOKEN=$REG_TOKEN \
   -e RUNNER_NAME=$RUNNER_NAME \
   -e GHLABELS=docker-runner \
