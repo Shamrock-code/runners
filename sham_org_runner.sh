@@ -15,7 +15,7 @@ REP=$(gh api \
   --method POST \
   -H "Accept: application/vnd.github+json" \
   -H "X-GitHub-Api-Version: 2022-11-28" \
-  orgs/${ORGANIZATION}/actions/runners/registration-token)
+  orgs/${GH_ORGA}/actions/runners/registration-token)
 
 echo " Rep = ${REP}"
 
