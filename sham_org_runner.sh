@@ -3,8 +3,7 @@ set -e
 RUNNER_SUFFIX=$(cat /dev/urandom | tr -dc 'a-z0-9' | fold -w 8 | head -n 1)
 RUNNER_NAME="$(hostname)-${RUNNER_SUFFIX}"
 
-GH_ORGA=tdavidcl
-GH_REPOSITORY=Shamrock
+GH_ORGA=Shamrock-code
 
 echo " ------------ Config ------------"
 echo "GH_ORGA = ${GH_ORGA}"
