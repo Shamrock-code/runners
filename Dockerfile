@@ -2,7 +2,7 @@ FROM cruizba/ubuntu-dind:latest
 
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt update
-RUN apt install -y -qq jq git gh libicu-dev
+RUN apt install -y -qq jq git gh libicu-dev unzip
 
 WORKDIR /home/ubuntu
 RUN curl -o actions-runner-linux-x64-2.336.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.336.0/actions-runner-linux-x64-2.336.0.tar.gz

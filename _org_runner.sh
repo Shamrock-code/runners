@@ -29,6 +29,7 @@ echo " ----------------------------------------"
 
 echo " ----------- Starting runner ------------"
 docker run --privileged -ti \
+  --add-host=host.docker.internal:host-gateway \
   -e GH_GIT_URL=$GH_ORGA \
   -e REG_TOKEN=$REG_TOKEN \
   -e RUNNER_NAME=$RUNNER_NAME \
