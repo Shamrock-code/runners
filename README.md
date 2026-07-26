@@ -1,3 +1,9 @@
+# Shamrock's github runner setup
+
+Start github action runner inside a docker that is Docker-in-Docker compatible (e.g. you can start a docker in the github action that is in a Docker).
+
+## Setup
+
 From docker guide for debian
 
 ```
@@ -36,5 +42,9 @@ Github CLI
 && sudo apt install gh -y
 ```
 
+## Starting the organisation runner
 
-sh start.sh
+Simply :
+```bash
+sh sham_org_runner.sh
+```
