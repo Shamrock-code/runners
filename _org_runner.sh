@@ -32,6 +32,6 @@ docker run --privileged -ti \
   -e GH_GIT_URL=$GH_ORGA \
   -e REG_TOKEN=$REG_TOKEN \
   -e RUNNER_NAME=$RUNNER_NAME \
-  -e GHLABELS=docker-runner \
+  -e GHLABELS=${GHLABELS} \
   testing-runner
 echo " ----------------- Done -----------------"
